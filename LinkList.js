@@ -81,8 +81,31 @@ class LinkList{
         }
         console.log("->",x)
      }
+     at(value){
+        let x = this.head;
+        let o = 0;
+       while(x !== null){
+           o++;
+           if(x.value === value){
+               console.log(o)
+               return;
+        }
+        x = x.next;
+    }
+     }
 
+     pop(){
+        let current = this.head;
+        let newCurrent = this.head.next;
 
+        while(newCurrent !== null){
+            console.log("Test----", current.value)
+            newCurrent = newCurrent.next;
+            current = current.next;
+            this.head = current.next;
+            }
+        
+     }
 }
 
 let newList = new LinkList();
@@ -96,6 +119,7 @@ newList.insertAfter("fan","Prajwal")
 newList.size()
 newList.firstNode()
 newList.printData()
+newList.pop()
+newList.at("table");
 
-
-console.log("ddd",newList.toString())
+newList.printData()
