@@ -68,6 +68,20 @@ class LinkList{
         console.log("This is the First Node", this.head.value)
      }
 
+     toString(){
+        let o = this.head;
+        let x  = "";
+        // let t = []
+        while(o !== null ){
+            // t.push(o.value)
+            x += `(${o.value}) ->`;
+            o = o.next;
+            
+
+        }
+        console.log("->",x)
+     }
+
 
 }
 
@@ -82,3 +96,6 @@ newList.insertAfter("fan","Prajwal")
 newList.size()
 newList.firstNode()
 newList.printData()
+
+
+console.log("ddd",newList.toString())
